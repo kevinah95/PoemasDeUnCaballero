@@ -1,4 +1,4 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
+import io.github.kevinah95.poemasdeuncaballero.versionCodeFrom
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -54,8 +54,9 @@ android {
         applicationId = "io.github.kevinah95.poemasdeuncaballero"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
+        val appVersion = "1.0"
+        versionName = appVersion
+        versionCode = versionCodeFrom(appVersion)
     }
     packaging {
         resources {
